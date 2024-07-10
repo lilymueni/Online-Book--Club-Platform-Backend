@@ -11,7 +11,7 @@ with app.app_context():
     # Clear session
     db.session.remove()
 
-    # Create some users (doctors)
+    # Create some users 
     user1 = User(username='Smith', email='smith@gmail.com')
     user2 = User(username='Johnson', email='johnson@gmail.com')
 

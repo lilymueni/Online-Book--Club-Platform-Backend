@@ -13,7 +13,7 @@ metadata = MetaData(
 db = SQLAlchemy(metadata=metadata)
 
 # User Model
-class User(db.Model):
+class User(db.Model,SerializerMixin):
     __tablename__ = 'users'
 
     # Define columns
@@ -37,7 +37,7 @@ class User(db.Model):
 
 
 # BookClub Model
-class BookClub(db.Model):
+class BookClub(db.Model,SerializerMixin):
     __tablename__ = 'book_clubs'
 
     # Define columns
@@ -62,7 +62,7 @@ class BookClub(db.Model):
 
 
 # Membership Model (join table)
-class Membership(db.Model):
+class Membership(db.Model,SerializerMixin):
     __tablename__ = 'memberships'
 
     # Define columns
